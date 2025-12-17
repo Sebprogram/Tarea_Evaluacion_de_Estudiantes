@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASIFICACIÓN DE NOTAS</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-dark text-white text-center">
+    
+    <div class="container py-4">
+        <h1 class="mb-4">SISTEMA DE REGISTRO DE NOTAS</h1>
+        <hr>
+        
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+                <div class="form-floating mb-3">
+                    <input
+                        type="number"
+                        class="form-control"
+                        name="formId1"
+                        id="txt_nota"
+                        placeholder="Ej: 8"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        autofocus
+                    />
+                    <label for="formId1">INGRESE NOTA DEL ESTUDIANTE</label>
+                </div>
+                
+                <div class="d-grid gap-2">
+                    <button
+                        type="button"
+                        name=""
+                        id="btn_agregar"
+                        class="btn btn-primary"
+                    >
+                        AGREGAR NOTA DEL ESTUDIANTE
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-3 mt-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card bg-success text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">APROBADOS</h5>
+                        <p class="card-text display-1 fw-bold my-3" id="txt_total_aprobados">0</p>
+                        <p class="card-text"><small>Notas de 7 a 10</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card bg-warning text-dark h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">SUPLETORIO</h5>
+                        <p class="card-text display-1 fw-bold my-3" id="txt_total_supletorio">0</p>
+                        <p class="card-text"><small>Notas de 5 a 6</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card bg-danger text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">REPROBADOS</h5>
+                        <p class="card-text display-1 fw-bold my-3" id="txt_total_reprobados">0</p>
+                        <p class="card-text"><small>Notas de 0 a 4</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <div class="card bg-info text-dark h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">PROMEDIO DEL CURSO</h5>
+                        <p class="card-text display-2 fw-bold my-3" id="txt_promedio_curso">0.00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card bg-secondary text-white h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">ESTADO DEL CURSO</h5>
+                        <p class="card-text display-4 fw-bold my-3" id="txt_estado_curso">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3 class="mb-3">LISTA DE ESTUDIANTES</h3>
+            <ul class="list-group list-group-flush" id="lista_notas"></ul>
+        </div>
+    </div>
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="public/js/estudiantes.js"></script>
+</body>
+</html>
